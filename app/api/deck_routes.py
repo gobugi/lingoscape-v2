@@ -67,8 +67,6 @@ def create_deck():
     form = DeckForm()
     form['csrf_token'].data = request.cookies['csrf_token']
 
-    print(CGREEN, "\n", form.data, "\n", CEND)
-
     if form.validate_on_submit():
         deck = Deck(title=form.data['title'], authorId=form.data['authorId'], languageId=form.data['languageId'])
 
