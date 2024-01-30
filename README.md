@@ -1,4 +1,4 @@
-# Lingoscape &nbsp;[![favicon](https://raw.githubusercontent.com/gobugi/lingoscape/main/react-app/public/favicon.ico)](https://lingoscape.onrender.com)
+# Lingoscape &nbsp;[<img src="https://gist.github.com/assets/80723197/7f0d1fad-1509-4c66-a756-d5f681d0237b" width="35px" height="35px">](https://lingoscape.onrender.com)
 
 *By Johnny Park - Visit [Lingoscape](https://lingoscape.onrender.com)*
 
