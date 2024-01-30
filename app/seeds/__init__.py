@@ -16,15 +16,12 @@ seed_commands = AppGroup('seed')
 @seed_commands.command('all')
 def seed():
     if environment == 'production':
-        # Before seeding, truncate all tables prefixed with schema name
-        db.session.execute(f"TRUNCATE table {SCHEMA}.users RESTART IDENTITY CASCADE;")
-        db.session.execute(f"TRUNCATE table {SCHEMA}.languages RESTART IDENTITY CASCADE;")
-        db.session.execute(f"TRUNCATE table {SCHEMA}.decks RESTART IDENTITY CASCADE;")
-        db.session.execute(f"TRUNCATE table {SCHEMA}.cards RESTART IDENTITY CASCADE;")
-        db.session.execute(f"TRUNCATE table {SCHEMA}.favorites RESTART IDENTITY CASCADE;")
-        # Add a truncate command here for every table that will be seeded.
-        db.session.commit()
-    seed_users()
+        undo_favorites()
+        undo_cards()
+        undo_decks()
+        undo_languages()
+        undo_users()
+    user = seed_users()
     seed_languages()
     seed_decks()
     seed_cards()
@@ -35,9 +32,9 @@ def seed():
 # Creates the `flask seed undo` command
 @seed_commands.command('undo')
 def undo():
-    undo_users()
-    undo_languages()
-    undo_decks()
-    undo_cards()
     undo_favorites()
+    undo_cards()
+    undo_decks()
+    undo_languages()
+    undo_users()
     # Add other undo functions here
