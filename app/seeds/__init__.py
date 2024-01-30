@@ -1,5 +1,9 @@
 from flask.cli import AppGroup
 from .users import seed_users, undo_users
+from .languages import seed_languages, undo_languages
+from .decks import seed_decks, undo_decks
+from .cards import seed_cards, undo_cards
+from .favorites import seed_favorites, undo_favorites
 
 from app.models.db import db, environment, SCHEMA
 
@@ -17,12 +21,14 @@ def seed():
         db.session.execute(f"TRUNCATE table {SCHEMA}.languages RESTART IDENTITY CASCADE;")
         db.session.execute(f"TRUNCATE table {SCHEMA}.decks RESTART IDENTITY CASCADE;")
         db.session.execute(f"TRUNCATE table {SCHEMA}.cards RESTART IDENTITY CASCADE;")
+        db.session.execute(f"TRUNCATE table {SCHEMA}.favorites RESTART IDENTITY CASCADE;")
         # Add a truncate command here for every table that will be seeded.
         db.session.commit()
     seed_users()
     seed_languages()
     seed_decks()
     seed_cards()
+    seed_favorites()
     # Add other seed functions here
 
 
@@ -33,4 +39,5 @@ def undo():
     undo_languages()
     undo_decks()
     undo_cards()
+    undo_favorites()
     # Add other undo functions here

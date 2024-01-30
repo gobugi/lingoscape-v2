@@ -56,11 +56,8 @@ def upgrade():
 
     if environment == "production":
         op.execute(f"ALTER TABLE languages SET SCHEMA {SCHEMA};")
-    if environment == "production":
         op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
-    if environment == "production":
         op.execute(f"ALTER TABLE decks SET SCHEMA {SCHEMA};")
-    if environment == "production":
         op.execute(f"ALTER TABLE cards SET SCHEMA {SCHEMA};")
     # ### end Alembic commands ###qqqqqqqqq
 
