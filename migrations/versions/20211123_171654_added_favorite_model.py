@@ -1,7 +1,7 @@
 """added favorite model
 
 Revision ID: 2d05b8b21b58
-Revises: 4ec85371f512
+Revises: 
 Create Date: 2021-11-23 17:16:54.215853
 
 """
@@ -15,7 +15,7 @@ SCHEMA = os.environ.get("SCHEMA")
 
 # revision identifiers, used by Alembic.
 revision = '2d05b8b21b58'
-down_revision = '4ec85371f512'
+down_revision = None
 branch_labels = None
 depends_on = None
 
