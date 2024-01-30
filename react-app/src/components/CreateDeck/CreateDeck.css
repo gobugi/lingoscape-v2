@@ -1,0 +1,24 @@
+.langSelect {
+  width: 368px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#main-new-deck {
+  margin-top: 142px;
+  text-align: center;
+}
+
+#title-err {
+  margin-bottom: 15px;
+  color: red;
+}
+
+
+#create-deck-heading {
+  margin-bottom: 40px;
+}
+
+#createDeckForm {
+  margin-top: 40px;
+}

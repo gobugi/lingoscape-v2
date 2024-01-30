@@ -1,0 +1,74 @@
+#addCardForm {
+  margin-left: -30px !important;
+}
+
+
+#main-decks-edit {
+  text-align: center;
+  margin-top: 142px;
+  min-width: 1390px;
+}
+
+
+#main-decks-edit>div {
+  text-align: center;
+}
+
+
+#main-decks-edit>div>ul {
+  list-style-type: none;
+}
+
+#revealTitleBtn {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
+  margin-top: -10px;
+}
+
+#edit-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+
+}
+
+
+.card-display {
+  margin-left: 238px;
+}
+
+.card-display>div {
+  display: inline-block;
+  width: 350px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.card-display>div>span {
+  width: 350px;
+  overflow-wrap: break-word;
+}
+
+.QAdiv {
+  border-bottom: solid;
+  border-color: #00aade2f;
+}
+
+.delete-done-btns {
+  display: flex;
+  margin: auto;
+  width: 770px;
+  justify-content: space-between;
+}
+
+#addCardUL {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.err-msg {
+  color: red;
+  margin-bottom: 5px;
+}

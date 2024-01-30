@@ -1,0 +1,324 @@
+body { margin: 0; padding: 0; background-color: #f2f2f2; max-width: 100%; overflow-x: hidden;}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+@font-face {
+  font-family: 'mont';
+  src: url('Mont-Bold.woff') format('woff'),
+       url('Mont-Bold.ttf') format('truetype');
+  }
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: #4b4040ed;
+  border-radius: 5px;
+  opacity: 0.75;
+}
+
+button:hover {
+  background-color: #4B4040;
+  opacity: 1;
+}
+
+input {
+  font-family: 'Open Sans', sans-serif;
+  width: 360px;
+  font-size: 16px;
+  border-radius: 3px;
+  border-color: #4B4040;
+  border-width: 1px;
+}
+
+input:focus {
+  border-color:rgba(63,174,224,.8);
+  outline:0;
+  -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(63,174,224,.6);
+  -moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(63,174,224,.6);
+  box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(63,174,224,.6);
+}
+
+select {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  border-radius: 3px;
+  border-color: #4B4040;
+}
+
+select:focus {
+  border-color:rgba(63,174,224,.8);
+  outline:0;
+  -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(63,174,224,.6);
+  -moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(63,174,224,.6);
+  box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(63,174,224,.6);
+}
+
+
+
+button:hover {
+  cursor: pointer;
+}
+
+main {
+  margin-top: 72px;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  z-index: -1;
+  padding-bottom: 40px;
+}
+
+
+nav {
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  display: flex;
+  height: 4.5em;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: top 0.2s ease;
+  width: 100%;
+  min-width: 970px;
+  z-index: 10;
+}
+
+.logo-container {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  height: 100%;
+  padding-left: 4%;
+  max-width: 20%;
+  width: auto;
+}
+
+.lingoscape-logo {
+  height: 40px;
+}
+
+.navbar-items-container {
+  color: black;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  background-color: white;
+  display: flex;
+  font-weight: 500;
+  height: 100%;
+  justify-content: flex-end;
+  max-width: 100%;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#nav-lingoscape {
+  font-family: 'mont';
+  font-size: 18px;
+  font-weight: 900;
+  color: #4B4040;
+  margin-bottom: 0.78em;
+}
+
+#nav-lingoscape:link {
+  text-decoration: none;
+}
+
+#nav-lingoscape:hover {
+  text-decoration: none;
+}
+
+#nav-lingoscape:visited {
+  text-decoration: none;
+}
+
+#nav-find-flashcards:link {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-find-flashcards:hover {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-find-flashcards:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.fa-search {
+  font-size: 0.8rem;
+  -webkit-text-stroke: 1px white;
+}
+
+#nav-make-flashcards:link {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-make-flashcards:hover {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-make-flashcards:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-login {
+  text-decoration: none;
+  color: black;
+  font-size: 13.5px;
+  font-weight: bold;
+  background-color: #FAFBFB;
+
+
+
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+  height: 100%;
+  justify-content: center;
+  line-height: 1.125rem;
+  width: 50%;
+}
+
+#nav-login:link {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-login:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #EFF2F2;
+  font-size: 14.5px;
+}
+
+#nav-login:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-signup {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  background-color: #FF8A47;
+
+
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+  height: 100%;
+  justify-content: center;
+  line-height: 1.125rem;
+  width: 50%;
+}
+
+
+#nav-signup:link {
+  text-decoration: none;
+  color: white;
+}
+
+#nav-signup:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #FF8243;
+  font-size: 15px;
+}
+
+#nav-signup:visited {
+  text-decoration: none;
+  color: white;
+}
+
+#log-btns {
+  display: flex;
+  width: 28rem;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+#nav-btns {
+  color: black;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12.5px;
+  background-color: white;
+  display: flex;
+  font-weight: 400;
+  height: 100%;
+  justify-content: flex-end;
+  max-width: 100%;
+  width: 100%;
+  margin-right: 2.1rem;
+  line-height: 1.125rem;
+  margin-left: auto;
+}
+
+#nav-find-flashcards {
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1.125rem;
+  width: 8rem;
+}
+
+#nav-make-flashcards {
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  line-height: 1.125rem;
+  width: 8rem;
+}
+
+#nav-separator {
+  width: 2rem;
+}
+
+.fa-user-circle:hover {
+  cursor: pointer;
+}
+
+.fa-user-circle {
+  font-size: 2.1rem;
+  color: #3faee0;
+  max-width:100%;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 14.95rem;
+  margin-top: 4px;
+}
+
+.profile-logout {
+  margin-top: 15px;
+  margin-right: 60px;
+  text-align: right;
+}
+
+.dropdown-div {
+  margin-right: 40px;
+  text-align: right;
+  margin-top: -50px;
+}
+
+.profile-dropdown {
+
+  text-align: right;
+}
+
+.profile-dropdown>* {
+
+  text-align: right;
+}
