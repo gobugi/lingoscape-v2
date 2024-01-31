@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LogoutButton from "../auth/LogoutButton";
 import "./NavBar.css";
-import logo from "./public/logo.png";
+import logo from "../../assets/logo.png"
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
