@@ -1,4 +1,5 @@
-from app.models import db, Card
+from app.models import db, Card, environment, SCHEMA
+from sqlalchemy.sql import text
 
 
 # Adds a demo user, you can add other users here if you want
