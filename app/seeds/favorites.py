@@ -18,5 +18,9 @@ def seed_favorites():
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
 def undo_favorites():
-    db.session.execute('TRUNCATE favorites RESTART IDENTITY CASCADE;')
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.favorites RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute(text("DELETE FROM favorites"))
+        
     db.session.commit()

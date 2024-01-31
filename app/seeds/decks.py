@@ -39,5 +39,9 @@ def seed_decks():
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
 def undo_decks():
-    db.session.execute('TRUNCATE decks RESTART IDENTITY CASCADE;')
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.decks RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute(text("DELETE FROM decks"))
+        
     db.session.commit()

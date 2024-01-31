@@ -880,5 +880,9 @@ def seed_cards():
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
 def undo_cards():
-    db.session.execute('TRUNCATE cards RESTART IDENTITY CASCADE;')
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.cards RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute(text("DELETE FROM cards"))
+        
     db.session.commit()

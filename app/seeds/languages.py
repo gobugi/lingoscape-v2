@@ -89,5 +89,9 @@ def seed_languages():
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
 def undo_languages():
-    db.session.execute('TRUNCATE languages RESTART IDENTITY CASCADE;')
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.languages RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute(text("DELETE FROM languages"))
+        
     db.session.commit()
